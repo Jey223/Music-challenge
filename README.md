@@ -1,5 +1,5 @@
 # Musical
-Play music of all kind.
+Play Christian music.
 # Languages
     - HTML
     - CSS

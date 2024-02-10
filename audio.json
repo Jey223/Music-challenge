@@ -1,0 +1,65 @@
+{
+    "songs" : [
+        {
+        "name": "Breathe",
+        "path": "/assets/music/Breathe.mp3",
+        "artist": "Dunsin Oyekan",
+        "cover": "assets/images/breathe-dunsin.jpg"
+        },
+        {
+            "name":"Turning Around",
+            "path":"/assets/music/Joe-Mettle-Turning-Around-(Gospeljingle.com).mp3",
+            "artist":"Joe Mettle",
+            "cover":"assets/images/TurningAround-joe.jpg"
+        },
+        {
+            "name":"This Is The Day(live)",
+            "path":"/assets/music/Planetshakers_-_This_Is_The_Day_CeeNaija.com_.mp3",
+            "artist":"PlanetShakers",
+            "cover":"assets/images/this is the day-Planetshakers.jpg"
+        },
+        {
+            "name":"Dance(live)",
+            "path":"/assets/music/Planetshakers-Dance-3v.mp3",
+            "artist":"PlanetShakers",
+            "cover":"assets/images/dance-planetshakers.jpg"
+        },
+        {
+            "name":"Fighting for me",
+            "path":"/assets/music/Riley_Clemmons_-_Fighting_For_Me_CeeNaija.com_.mp3",
+            "artist":"Riley Clemmons",
+            "cover":"assets/images/fighting for me-riley clemmons.jpg"
+        },
+        {
+            "name":"Yahweh Sabaoth",
+            "path":"/assets/music/Nathaniel-Bassey-Yahweh-Sabaoth.mp3",
+            "artist":"Nathaniel Bassey",
+            "cover":"assets/images/Nathaniel-Bassey-YAHWEH-SABAOTH.jpg"
+        },
+        {
+            "name":"Calling my Name",
+            "path":"/assets/music/Ebuka_Songs_-_Calling_My_Name_Im_A_Soldier.mp3",
+            "artist":"Ebuka Songs",
+            "cover":"assets/images/Calling-My-Name-Ebuka-Songs.jpeg"
+        },
+        {
+            "name":"Jesus Iye",
+            "path":"/assets/music/Jesus Iye by Nathaniel Bassey.mp3",
+            "artist":"Nathaniel Bassey",
+            "cover":"assets/images/Jesus-Iye-Cover.jpeg"
+        },
+        {
+            "name":"Waves are Singing",
+            "path":"/assets/music/Evans_Ighodalo_-_Waves_Are_Singing-Evans_Ighodalo.mp3",
+            "artist":"Evans Ighodalo",
+            "cover":"assets/images/waves are singing-evans ighodalo.jpg"
+        },
+        {
+            "name":"Daddy you too much",
+            "path":"/assets/music/Judikay_-_Daddy_You_Too_Much_CeeNaija.com_.mp3",
+            "artist":"Judikay",
+            "cover":"assets/images/daddy you too much-Judikay.jpg"
+        }
+     
+    ]
+}

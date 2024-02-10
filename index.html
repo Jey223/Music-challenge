@@ -5,263 +5,552 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <title>Musical</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
+
+    <script src="/app.js" defer></script>
+
 </head>
 <body>
+    <audio src="" id="audio"></audio>
+
+
     <div class="wrapper">
-        <header>
+
+        <div class="overlay"></div>
+
+        <header class="body-header">
             <nav>
-                <div class="lpt-header">
+                <div class="lpt-header side-nav">
                     <div class="logo">
-                        <img src="./images/logo.png" alt="">
+                        <img src="/images/logo.png" alt="">
                     </div>
                     <div class="nav-l">
-                        <img src="./images/nav link icons/Iconly/Bulk/Home1.png" alt="">
-                        <a href="playlist.html"><img src="./images/nav link icons/Iconly/Bulk/playlist2.png" alt=""></a>
-                        <img src="./images/nav link icons/Iconly/Bulk/radio.png" alt="">
-                        <img src="./images/nav link icons/Iconly/Bulk/videos.png" alt="">
+                        <a href="index.html" class="homepage">
+                            <img src="/images/nav link icons/Iconly/Bulk/Home1.png" alt="">
+                        </a>
+                        <a href="./pages/playlist.html" class="play_list">
+                            <img src="/images/nav link icons/Iconly/Bulk/playlist2.png" alt="">
+                        </a>
+                        <img src="/images/nav link icons/Iconly/Bulk/radio.png" alt="">
+                        <img src="/images/nav link icons/Iconly/Bulk/videos.png" alt="">
                     </div>
                     <div class="nav-l">
-                        <img src="./images/nav link icons/Iconly/Bulk/profile.png" alt="">
-                        <img src="./images/nav link icons/Iconly/Bulk/Logout.png" alt="">
+                        <img src="/images/nav link icons/Iconly/Bulk/profile.png" alt="">
+                        <img src="/images/nav link icons/Iconly/Bulk/Logout.png" alt="">
                     </div>
                 </div>
-                <div class="container">
-                    <input id="menu__toggle" type="checkbox" />
+                <div class="mobile-nav">
+                    <input id="menu__toggle" type="checkbox"/>
                     <label class="menu__btn" for="menu__toggle">
                         <span></span>
                     </label>
                 
                     <ul class="menu__box">
-                        <li><a class="menu__item nav1" href="index.html"><img src="./images/nav link icons/Iconly/Bulk/Home1.png" alt=""><span>Home</span> </a></li>
-                        <li><a class="menu__item" href="playlist.html"><img src="./images/nav link icons/Iconly/Bulk/playlist2.png" alt=""><span class="n-span"> My collections</span></a></li>
-                        <li><a class="menu__item" href="#"><img src="./images/nav link icons/Iconly/Bulk/radio.png" alt=""><span> Radio </span></a></li>
-                        <li><a class="menu__item" href="#"><img src="./images/nav link icons/Iconly/Bulk/videos.png" alt=""><span class="n-span"> Music videos</span></a></li>
-                        <li><a class="menu__item" href="#"><img src="./images/nav link icons/Iconly/Bulk/profile.png" alt=""> <span> Profile</span></a></li>
-                        <li><a class="menu__item" href="#"><img src="./images/nav link icons/Iconly/Bulk/Logout.png" alt=""><span> Log out </span></a></li>
+                        <li>
+                            <a class="menu__item nav1 homepage" href="index.html">
+                                <img src="/images/nav link icons/Iconly/Bulk/Home1.png" alt="">
+                                <span>Home</span> 
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu__item play_list" href="./pages/playlist.html">
+                                <img src="/images/nav link icons/Iconly/Bulk/playlist2.png" alt="">
+                                <span class="n-span"> My collections</span>
+                            </a>
+                        </li>
+                        <li><a class="menu__item" href="#"><img src="/images/nav link icons/Iconly/Bulk/radio.png" alt=""><span> Radio </span></a></li>
+                        <li><a class="menu__item" href="#"><img src="/images/nav link icons/Iconly/Bulk/videos.png" alt=""><span class="n-span"> Music videos</span></a></li>
+                        <li><a class="menu__item" href="#"><img src="/images/nav link icons/Iconly/Bulk/profile.png" alt=""> <span> Profile</span></a></li>
+                        <li><a class="menu__item" href="#"><img src="/images/nav link icons/Iconly/Bulk/Logout.png" alt=""><span> Log out </span></a></li>
                     </ul>
                     <div class="logo">
-                        <img src="./images/logo.png" alt="">
+                        <img src="/images/logo.png" alt="">
                     </div>
                 </div>
                 <div class="h-search">
-                    <img src="./images/search.png" alt="search">
+                    <img src="/images/search.png" alt="search">
                 </div>
             </nav>
         </header>
+
+
         <main>
-            <div class="search">
-                <img src="./images/search.png" alt="search icon">
+            <div class="search sch-wrap">
+                <img src="/images/search.png" alt="search icon">
                 <input type="text" placeholder="Search artists">
             </div>
             
-            <div class="wrap-section wrap-padding-bottom">
-                <div class="wrap">
-                    <section> 
-                        <div class="main-container">
-                            <p class="cpl">Currated playlist</p>
-                            <div class="inner-container">
-                                <div class="content">
-                                    <h1>R & B Hits</h1>
-                                    <p>All mine, Lie again, Petty call me everyday,Out of time, No love, Bad habit, and so much more</p>
-                                </div>
-                                <div class="likes">
-                                    <div class="img-likes">
-                                        <img src="./images/Ellipse 2.png" alt="person1">
-                                        <img src="./images/Ellipse 3.png" alt="person1" class="p1">
-                                        <img src="./images/Ellipse 4.png" alt="person1" class="p2">
-                                        <img src="./images/Ellipse 5.png" alt="person1" class="p3">
-                                        <img src="./images/Ellipse 6.png" alt="person1" class="p4">
+                <div class="wrap-section wrap-padding-bottom">
+                    <div class="wrap">
+                        <div class="section"> 
+                            <div class="main-container">
+                                <p class="cpl">Curated playlist</p>
+                                <div class="inner-container">
+                                    <div class="content">
+                                        <h1>R & B Hits</h1>
+                                        <p>All mine, Lie again, Petty call me everyday,Out of time, No love, Bad habit, and so much more</p>
                                     </div>
-                                    <img src="./images/Musica/Iconly/Bold/Vector.png" alt="love-icon" class="lv-ic">
-                                    <span>33k Likes</span>
+                                    <div class="likes">
+                                        <div class="img-likes">
+                                            <img src="/images/Ellipse 2.png" alt="person1">
+                                            <img src="/images/Ellipse 3.png" alt="person1" class="p1">
+                                            <img src="/images/Ellipse 4.png" alt="person1" class="p2">
+                                            <img src="/images/Ellipse 5.png" alt="person1" class="p3">
+                                            <img src="/images/Ellipse 6.png" alt="person1" class="p4">
+                                        </div>
+                                        <img src="/images/Musica/Iconly/Bold/Vector.png" alt="love-icon" class="lv-ic">
+                                        <span>33k Likes</span>
+                                    </div>
+                                </div>
+                            </div> 
+                            <img src="/images/Pexels Photo by Eric Esma.png" alt="">
+                        </div>
+    
+    
+                        <article>
+                            <div class="display-article tc">
+                                <h2>Top charts</h2>
+                                <div class="in-chart ch">
+                                    <div class="chart-holder charttt c1">
+                                        <div class="holder-left">
+                                            <img src="/images/chart1.png" alt="top chart1">
+                                            <div class="text-holder">
+                                                <h3>Golden age of 80s</h3>
+                                                <p>Sean swadder</p>
+                                                <span>2:34:45</span>
+                                            </div>
+                                        </div>
+                                        <div class="musica-hod">
+                                            <img src="/images/Iconly/Two-tone/Stroke-1.png" alt="love">
+                                            <img src="/images/Iconly/Two-tone/Stroke-3.png" alt="love stroke" class="str">
+                                        </div>
+                                    </div>
+                
+                                    <div class="chart-holder charttt c2">
+                                        <div class="holder-left">
+                                            <img src="/images/chart2.png" alt="top chart1">
+                                            <div class="text-holder">
+                                                <h3>Reggae “n” blues</h3>
+                                                <p>Dj YK mule</p>
+                                                <span>1:02:42</span>
+                                            </div>
+                                        </div>
+                                        <div class="musica-hod">
+                                            <img src="/images/Iconly/Two-tone/Stroke-1.png" alt="love">
+                                            <img src="/images/Iconly/Two-tone/Stroke-3.png" alt="love stroke" class="str">
+                                        </div>
+                                    </div>
+                
+                                    <div class="chart-holder charttt">
+                                        <div class="holder-left">
+                                            <img src="/images/chart3.png" alt="top chart1">
+                                            <div class="text-holder">
+                                                <a href="./pages/playtunes.html"><h3> Tomorrow’s tunes</h3></a>
+                                                <p>Obi Datti</p>
+                                                <span>2:01:25</span>
+                                            </div>
+                                        </div>
+                                        <div class="musica-hod">
+                                            <img src="/images/Iconly/Two-tone/Stroke-1.png" alt="love">
+                                            <img src="/images/Iconly/Two-tone/Stroke-3.png" alt="love stroke" class="str">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div> 
-                        <img src="./images/Pexels Photo by Eric Esma.png" alt="">
-                    </section>
-
-
-                    <article>
-                        <div class="display-article tc">
-                            <h2>Top charts</h2>
-                            <div class="in-chart ch">
-                                <div class="chart-holder charttt c1">
-                                    <div class="holder-left">
-                                        <img src="./images/chart1.png" alt="top chart1">
-                                        <div class="text-holder">
-                                            <h3>Golden age of 80s</h3>
-                                            <p>Sean swadder</p>
-                                            <span>2:34:45</span>
-                                        </div>
-                                    </div>
-                                    <div class="musica-hod">
-                                        <img src="./images/Iconly/Two-tone/Stroke-1.png" alt="love">
-                                        <img src="./images/Iconly/Two-tone/Stroke-3.png" alt="love stroke" class="str">
-                                    </div>
-                                </div>
-            
-                                <div class="chart-holder charttt c2">
-                                    <div class="holder-left">
-                                        <img src="./images/chart2.png" alt="top chart1">
-                                        <div class="text-holder">
-                                            <h3>Reggae “n” blues</h3>
-                                            <p>Dj YK mule</p>
-                                            <span>1:02:42</span>
-                                        </div>
-                                    </div>
-                                    <div class="musica-hod">
-                                        <img src="./images/Iconly/Two-tone/Stroke-1.png" alt="love">
-                                        <img src="./images/Iconly/Two-tone/Stroke-3.png" alt="love stroke" class="str">
-                                    </div>
-                                </div>
-            
-                                <div class="chart-holder charttt">
-                                    <div class="holder-left">
-                                        <img src="./images/chart3.png" alt="top chart1">
-                                        <div class="text-holder">
-                                            <a href="tunes.html" ><h3> Tomorrow’s tunes</h3></a>
-                                            <p>Obi Datti</p>
-                                            <span>2:01:25</span>
-                                        </div>
-                                    </div>
-                                    <div class="musica-hod">
-                                        <img src="./images/Iconly/Two-tone/Stroke-1.png" alt="love">
-                                        <img src="./images/Iconly/Two-tone/Stroke-3.png" alt="love stroke" class="str">
-                                    </div>
-                                </div>
+                        </article>
+                    </div>
+    
+    
+                    <article class="display-article m-list">
+                        <h2>New releases.</h2>
+                        <div class="in-chart playlist-info">
+                            <!-- <div class="music-holder mus">
+                                <img src="/images/ms1.png" alt="top chart1" class="playlist-card-img">
+                                <h3 class="song-title playlist-card-title">Life in a bubble</h3>
+                                <p class="artist playlist-card-artist">The van</p>
+                            </div> -->
+                            <!-- <div class="music-holder mus">
+                                <img src="/images/ms2.png" alt="top chart1" class="playlist-card-img">
+                                <h3 class="song-title playlist-card-title">Mountain</h3>
+                                <p class="artist playlist-card-artist">Krisx</p>
                             </div>
+                            <div class="music-holder mus">
+                                <img src="/images/ms3.png" alt="top chart1" class="playlist-card-img">
+                                <h3 class="song-title playlist-card-title">Limits</h3>
+                                <p class="artist playlist-card-artist">John Dillion</p>
+                            </div>
+                            <div class="music-holder mus">
+                                <img src="/images/ms4.png" alt="top chart1" class="playlist-card-img">
+                                <h3 class="song-title playlist-card-title">Everything’s black</h3>
+                                <p class="artist playlist-card-artist">Ameed</p>
+                            </div>
+                            <div class="music-holder mus">
+                                <img src="/images/ms5.png" alt="top chart1" class="playlist-card-img">
+                                <h3 class="song-title playlist-card-title">Cancelled</h3>
+                                <p class="artist playlist-card-artist">Enimen</p>
+                            </div>
+                            <div class="music-holder mus">
+                                <img src="/images/ms6.png" alt="top chart1" class="playlist-card-img">
+                                <h3 class="song-title playlist-card-title">Nomad</h3>
+                                <p class="artist playlist-card-artist">Makrol eli</p>
+                            </div>
+                            <div class="music-holder">
+                                <img src="/images/ms7.png" alt="top chart1" class="playlist-card-img">
+                                <h3 class="song-title playlist-card-title">Blind</h3>
+                                <p class="artist playlist-card-artist">Wiz zee</p>
+                            </div> -->
+                        </div>
+                    </article>
+    
+                    <article class="display-article m-list">
+                        <h2>Popular in your area</h2>
+                        <div class="in-chart playlist-info">
+                            <!-- <div class="music-holder mus">
+                                <img src="/images/ms1.png" alt="top chart1" class="playlist-card-img">
+                                <h3 class="song-title playlist-card-title">Life in a bubble</h3>
+                                <p class="artist playlist-card-artist">The van</p>
+                            </div> -->
+                            <!-- <div class="music-holder mus">
+                                <img src="/images/ms2.png" alt="top chart1" class="playlist-card-img">
+                                <h3 class="song-title playlist-card-title">Mountain</h3>
+                                <p class="artist playlist-card-artist">Krisx</p>
+                            </div>
+                            <div class="music-holder mus">
+                                <img src="/images/ms3.png" alt="top chart1" class="playlist-card-img">
+                                <h3 class="song-title playlist-card-title">Limits</h3>
+                                <p class="artist playlist-card-artist">John Dillion</p>
+                            </div>
+                            <div class="music-holder mus">
+                                <img src="/images/ms4.png" alt="top chart1" class="playlist-card-img">
+                                <h3 class="song-title playlist-card-title">Everything’s black</h3>
+                                <p class="artist playlist-card-artist">Ameed</p>
+                            </div>
+                            <div class="music-holder mus">
+                                <img src="/images/ms5.png" alt="top chart1" class="playlist-card-img">
+                                <h3 class="song-title playlist-card-title">Cancelled</h3>
+                                <p class="artist playlist-card-artist">Enimen</p>
+                            </div>
+                            <div class="music-holder mus">
+                                <img src="/images/ms6.png" alt="top chart1" class="playlist-card-img">
+                                <h3 class="song-title playlist-card-title">Nomad</h3>
+                                <p class="artist playlist-card-artist">Makrol eli</p>
+                            </div>
+                            <div class="music-holder">
+                                <img src="/images/ms7.png" alt="top chart1" class="playlist-card-img">
+                                <h3 class="song-title playlist-card-title">Blind</h3>
+                                <p class="artist playlist-card-artist">Wiz zee</p>
+                            </div> -->
                         </div>
                     </article>
                 </div>
+            <!-- </section> -->
 
-
-                <article class="display-article m-list">
-                    <h2>New releases.</h2>
-                    <div class="in-chart">
-                        <div class="music-holder mus">
-                            <img src="./images/ms1.png" alt="top chart1">
-                            <h3 class="song-title">Life in a bubble</h3>
-                            <p class="artist">The van</p>
+            <!-- <section class="playlist">
+                <div class="wrap-section">
+                    <div class="frame">
+                        <a href="#">My collection</a>
+                        <a href="#">Likes</a>
+                    </div>
+                    <div class="frame2">
+                        <div class="in-frame">
+                            <img src="/images/ms3(2).png" alt="" class="imge">
+                            <div class="textt">
+                                <div class="left">
+                                    <h3>Limits</h3>
+                                    <p class="card--name">John watts</p>
+                                    <span>2.3m likes</span>
+                                </div>
+                                <div class="pl-img">
+                                    <img src="/images/Playlist-btn.png" alt="" class="right">
+                                </div>
+                            </div>
+                        </div> 
+    
+                        <div class="in-frame">
+                            <img src="/images/ms5(2).png" alt="" class="imge">
+                            <div class="textt">
+                                <div class="left">
+                                    <h3>Limits</h3>
+                                    <p class="card--name">John watts</p>
+                                    <span>2.3m likes</span>
+                                </div>
+                                <div class="pl-img">
+                                    <img src="/images/Playlist-btn.png" alt="" class="right">
+                                </div>
+                            </div>
                         </div>
-                         <div class="music-holder mus">
-                            <img src="./images/ms2.png" alt="top chart1">
-                            <h3 class="song-title">Mountain</h3>
-                            <p class="artist">Krisx</p>
+                        <div class="in-frame">
+                            <img src="/images/ms1(2).png" alt="" class="imge">
+                            <div class="textt">
+                                <div class="left">
+                                    <h3>Limits</h3>
+                                    <p class="card--name">John watts</p>
+                                    <span>2.3m likes</span>
+                                </div>
+                                <div class="pl-img">
+                                    <img src="/images/Playlist-btn.png" alt="" class="right">
+                                </div>
+                            </div>
                         </div>
-                         <div class="music-holder mus">
-                            <img src="./images/ms3.png" alt="top chart1">
-                            <h3 class="song-title">Limits</h3>
-                            <p class="artist">John Dillion</p>
-                        </div>
-                        <div class="music-holder mus">
-                            <img src="./images/ms4.png" alt="top chart1">
-                            <h3 class="song-title">Everything’s black</h3>
-                            <p class="artist">Ameed</p>
-                        </div>
-                        <div class="music-holder mus">
-                            <img src="./images/ms5.png" alt="top chart1">
-                            <h3 class="song-title">Cancelled</h3>
-                            <p class="artist">Enimen</p>
-                        </div>
-                        <div class="music-holder mus">
-                            <img src="./images/ms6.png" alt="top chart1">
-                            <h3 class="song-title">Nomad</h3>
-                            <p class="artist">Makrol eli</p>
-                        </div>
-                        <div class="music-holder">
-                            <img src="./images/ms7.png" alt="top chart1">
-                            <h3 class="song-title">Blind</h3>
-                            <p class="artist">Wiz zee</p>
+                        <div class="in-frame">
+                            <img src="/images/ms-foot.png" alt="" class="imge">
+                            <div class="textt">
+                                <div class="left">
+                                    <h3>Limits</h3>
+                                    <p class="card--name">John watts</p>
+                                    <span>2.3m likes</span>
+                                </div>
+                                <div class="pl-img">
+                                    <img src="/images/Playlist-btn.png" alt="" class="right">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </article>
+                </div>
+            </section> -->
 
-                <article class="display-article m-list">
-                    <h2>Popular in your area</h2>
-                    <div class="in-chart">
-                        <div class="music-holder mus">
-                            <img src="./images/ms1.png" alt="top chart1">
-                            <h3 class="song-title">Life in a bubble</h3>
-                            <p class="artist">The van</p>
-                        </div>
-                        <div class="music-holder mus">
-                            <img src="./images/ms2.png" alt="top chart1">
-                            <h3 class="song-title">Mountain</h3>
-                            <p class="artist">Krisx</p>
-                        </div>
-                        <div class="music-holder mus">
-                            <img src="./images/ms3.png" alt="top chart1">
-                            <h3 class="song-title">Limits</h3>
-                            <p class="artist">John Dillion</p>
-                        </div>
-                        <div class="music-holder mus">
-                            <img src="./images/ms4.png" alt="top chart1">
-                            <h3 class="song-title">Everything’s black</h3>
-                            <p class="artist">Ameed</p>
-                        </div>
-                        <div class="music-holder mus">
-                            <img src="./images/ms5.png" alt="top chart1">
-                            <h3 class="song-title">Cancelled</h3>
-                            <p class="artist">Enimen</p>
-                        </div>
-                        <div class="music-holder mus">
-                            <img src="./images/ms6.png" alt="top chart1">
-                            <h3 class="song-title">Nomad</h3>
-                            <p class="artist">Makrol eli</p>
-                        </div>
-                        <div class="music-holder">
-                            <img src="./images/ms7.png" alt="top chart1">
-                            <h3 class="song-title">Blind</h3>
-                            <p class="artist">Wiz zee</p>
+            <!-- <section class="tunes-page">
+                <div class="wrap-section tune-wrap">
+                    <div class="tune-inner1">
+                            <img src="/images/chart3.png" alt="" class="main-img">
+                        <div class="tune-content">
+                            <div>
+                                <h1>
+                                    Tomorrow’s tunes
+                                </h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</p>
+                                <span class="sp1">64 songs ~ 16 hrs+</span>
+                            </div>
+                            <div class="choice">
+                                <a href="#" class="choice-in pl-al">
+                                    <img src="/images/tunes-img/Vector.png" alt="">
+                                    <span>Play all</span>
+                                </a>
+                                <a href="#" class="choice-in ad-col">
+                                    <img src="/images/tunes-img/music-square-add.png" alt="">
+                                    <span>Add to collection</span>
+                                </a>
+                                <a href="#" class="choice-in lk">
+                                    <img src="/images/tunes-img/Heart.png" alt="">
+                                    <span class="hid-lk">Like</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </article>
-            </div>
+    
+    
+                    <div class="tune-inner2">
+                        <a href="#" class="ms">
+                            <div class="invisible">
+                                <div class="ms-left">
+                                    <img src="/images/ms5.png" alt="">
+                                    <div class="lv">
+                                        <img src="/images/tunes-img/Stroke-1.png" alt="">
+                                        <img src="/images/tunes-img/Stroke-3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="ms-center">
+                                    <h3>Let me love you ~ Krisx</h3>
+                                    <p>Single</p>
+                                </div>
+                            </div>
+                            <div class="ms-right">
+                                <div class="dots">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <span>4:17</span>
+                            </div>
+                        </a>
+    
+                        <a href="#" class="ms">
+                            <div class="invisible">
+                                <div class="ms-left">
+                                    <img src="/images/tunes-img/imgg2.png" alt="">
+                                    <div class="lv">
+                                        <img src="/images/tunes-img/Stroke-1.png" alt="">
+                                        <img src="/images/tunes-img/Stroke-3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="ms-center">
+                                    <h3>Watin man go do ~ Burna</h3>
+                                    <p>African giant</p>
+                                </div>
+                            </div>
+                            <div class="ms-right">
+                                <div class="dots">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <span>2:30</span>
+                            </div>
+                        </a>
+    
+                        <a href="#" class="ms">
+                            <div class="invisible">
+                                <div class="ms-left">
+                                    <img src="/images/tunes-img/imgg3.png" alt="">
+                                    <div class="lv">
+                                        <img src="/images/tunes-img/Stroke-1.png" alt="">
+                                        <img src="/images/tunes-img/Stroke-3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="ms-center">
+                                    <h3>Stand strong ~ Davido</h3>
+                                    <p>Single</p>
+                                </div>
+                            </div>
+                            <div class="ms-right">
+                                <div class="dots">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <span>2:02</span>
+                            </div>
+                        </a>
+    
+                        <a href="#" class="ms">
+                            <div class="invisible">
+                                <div class="ms-left">
+                                    <img src="/images/tunes-img/imgg4.png" alt="">
+                                    <div class="lv">
+                                        <img src="/images/tunes-img/Stroke-1.png" alt="">
+                                        <img src="/images/tunes-img/Stroke-3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="ms-center">
+                                    <h3>Closa ~ Ybee</h3>
+                                    <p>Obi datti</p>
+                                </div>
+                            </div>
+                            <div class="ms-right">
+                                <div class="dots">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <span>3:23</span>
+                            </div>
+                        </a>
+    
+                        <a href="#" class="ms">
+                            <div class="invisible">
+                                <div class="ms-left">
+                                    <img src="/images/tunes-img/imgg5.png" alt="">
+                                    <div class="lv">
+                                        <img src="/images/tunes-img/Stroke-1.png" alt="">
+                                        <img src="/images/tunes-img/Stroke-3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="ms-center">
+                                    <h3>Let me love you ~ Krisx</h3>
+                                    <p>Single</p>
+                                </div>
+                            </div>
+                            <div class="ms-right">
+                                <div class="dots">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <span>4:17</span>
+                            </div>
+                        </a>
+    
+                        <a href="#" class="ms">
+                            <div class="invisible">
+                                <div class="ms-left">
+                                    <img src="/images/ms5.png" alt="">
+                                    <div class="lv">
+                                        <img src="/images/tunes-img/Stroke-1.png" alt="">
+                                        <img src="/images/tunes-img/Stroke-3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="ms-center">
+                                    <h3>Let me love you ~ Krisx</h3>
+                                    <p>Single</p>
+                                </div>
+                            </div>
+                            <div class="ms-right">
+                                <div class="dots">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <span>4:17</span>
+                            </div>
+                        </a>
+                    </div>
+    
+                </div>
+            </section> -->
         </main>
+
         <div class="rightspace"></div>
+        
         <footer>
             <div class="in-footer">
                 <div class="left-f">
-                    <img src="./images/ms-foot.png" alt="playing music">
+                    <img src="/images/ms-foot.png" alt="playing music" id="current-cover-img">
                     <div class="music-title">
-                        <h2 class="song-title">Seasons in</h2>
-                        <p>James</p>
+                        <h2 class="song-title" id="current-song-title">Seasons in</h2>
+                        <p class="artist-name" id="current-song artist">James</p>
                     </div>
                 </div>
                 <div class="middle-f">
                     <div class="controls">
-                        <img src="./images/shuffle.png" alt="">
-                        <img src="./images/previous.png" alt="">
-                        <img src="./images/play-b.png" alt="" class="pl">
-                        <img src="./images/next.png" alt="">
-                        <img src="./images/repeate-one.png" alt="">
-                    </div>
-                    <div class="aud-lent">
-                        <div class="aud-lent-rech">
-                            <div class="eclipse-out">
-                                <div class="eclipse-in"></div>
+                        <img src="/images/shuffle.png" alt="" class="shuffle-btn">
+                        <img src="/images/previous.png" alt="" class="prev-btn">
+                        <div class="play-pause ply-hld">
+                            <img src="/images/play-b.png" alt="" class="pl play-btn">
+                            <div class="pause-btn hide">
+                                <i class="fa fa-pause" title="pause button"></i>
                             </div>
                         </div>
+                        <img src="/images/next.png" alt="" class="next-btn">
+                        <img src="/images/repeate-one.png" alt="" class="repeat-btn">
+                    </div>
+                    <div class="aud-lent">
+                        <input type="range" value="0" class="sleek-bar" oninput="progressScript()">
                     </div>
                 </div>
                 <div class="right-f">
-                    <div class="play-holder">
-                        <img src="./images/playbutton.png" alt="button vector">
+                    <div class="play-holder ply-hld">
+                        <img src="/images/playbutton.png" alt="button vector" class="play-btn">
+                        <div class="pause-btn hide">
+                            <i class="fa fa-pause" title="pause button"></i>
+                        </div>
                     </div>
-                    <div class="next-holder">
-                        <img src="./images/vuesax/bold/vuesax/bold/next1.png" alt="nextbutton" class="im1">
-                        <img src="./images/vuesax/bold/vuesax/bold/next2.png" alt="nextbutton" class="im2">
+                    
+                    <div class="next-holder next-btn">
+                        <img src="/images/vuesax/bold/vuesax/bold/next1.png" alt="nextbutton" class="im1">
+                        <img src="/images/vuesax/bold/vuesax/bold/next2.png" alt="nextbutton" class="im2">
                     </div>
 
-                    <div class="snd-icon">
-                        <img src="./images/sound/vuesax/bold/vuesax/bold/Vector1.png" alt="">
-                        <img src="./images/sound/vuesax/bold/vuesax/bold/Vector2.png" alt="">
-                        <img src="./images/sound/vuesax/bold/vuesax/bold/Vector3.png" alt="">
+                    <div class="sound-holder">
+                        <div class="snd-icon">
+                            <img src="/images/sound/vuesax/bold/vuesax/bold/Vector1.png" alt="">
+                            <div class="sound-sh">
+                                <div  class="hide-vol">
+                                    <img src="/images/sound/vuesax/bold/vuesax/bold/Vector2.png" alt="">
+                                    <img src="/images/sound/vuesax/bold/vuesax/bold/Vector3.png" alt="">
+                                </div>
+                            </div>
+                            
+                        </div>
+                            <!-- <div class="vol"> -->
+                        <input type="range" max="1" value="1" step="0.1" class="volume-slider">
+                            <!-- <div class="vol-rechd"></div> -->
+                            <!-- </div> -->
                     </div>
-                    <div class="vol"><div class="vol-rechd"></div></div>
+                    
                 </div>
             </div>
         </footer>

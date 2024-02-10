@@ -1154,6 +1154,7 @@ footer{
         -moz-appearance: none;
         display: block;
         height: 3px;
+        width: 1px;
         width: calc(100% - 25px);
         overflow: hidden;
         border-radius: 42px;
@@ -1164,7 +1165,7 @@ footer{
         -webkit-appearance: none;
         appearance: none;
         height: 3px;
-        width: 3px;
+        width: 1px;
         background-color: #facd66;
         box-shadow: -100px 0 0 100px #facd66;
     }

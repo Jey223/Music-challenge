@@ -1,5 +1,4 @@
 //// QUERY SELECTORS ////
-
 // Music Player
 const playHldrs = document.querySelectorAll('.ply-hld')
 const playBtn = document.querySelectorAll('.play-btn');
@@ -12,17 +11,17 @@ const volumeBtn = document.querySelector('.snd-icon');
 const volumeSlider = document.querySelector('.volume-slider');
 const hideVolume = document.querySelector('.sound-sh');
 
+const loadPlaytunes = document.getElementById('playtunes');
+
+const music = document.getElementById('audio');
 
 let playbtn = document.querySelector('.play-btn');
 
 
-const music = document.getElementById('audio');
 
 
 // Progress Bar
 const seekBar = document.querySelector('.sleek-bar')
-
-// Volume Bar
 
 // Titles and Images
 const currentCoverImage = document.getElementById('current-cover-img');
@@ -31,7 +30,6 @@ const currentArtist = document.getElementById('current-song artist');
 const playListImage = document.querySelector('.playlist-card-img');
 const playListSongTitle = document.querySelector('.song-title');
 const playListArtist = document.querySelector('.artist');
-
 const playListInfo = document.querySelectorAll('.playlist-info');
 
 
@@ -50,7 +48,7 @@ let shuffledsongs;
 
 
 
-// // FUNCTIONS //
+// ///////// FUNCTIONS //
 
 
 // Update UI with all music
@@ -99,7 +97,6 @@ const playAudio = () => {
     music.play();
 }
 
-
 // Pause Current song
 const pauseAudio = () => {
     playBtn.forEach((playbtn) => {
@@ -111,10 +108,9 @@ const pauseAudio = () => {
     music.pause();
 }
 
-
 //LOAD SONGS FROM "server"
 async function retrieveSongsFromServer() {
-    await fetch('audio.json')
+    await fetch('/audio.json')
         .then((response) => {
             if(!response.ok){
                 throw new Error('Network Response was not okay');
@@ -233,7 +229,7 @@ const controlVolume = () => {
         hideVolume.classList.remove('display-vol');
     }
 }
-
+// Mute Volume
 const muteVolume = () => {
     volumeSlider.value = 1;
     hideVolume.classList.toggle('display-vol');

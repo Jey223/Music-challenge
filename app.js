@@ -1,3 +1,6 @@
+'use strict'
+
+
 //// QUERY SELECTORS ////
 // Music Player
 const playHldrs = document.querySelectorAll('.ply-hld')
@@ -31,6 +34,8 @@ const playListImage = document.querySelector('.playlist-card-img');
 const playListSongTitle = document.querySelector('.song-title');
 const playListArtist = document.querySelector('.artist');
 const playListInfo = document.querySelectorAll('.playlist-info');
+const nathTunes = document.querySelector('.tune-inner2');
+// const currentMusicTime = document.querySelector('.current-time');
 
 
 // Songs
@@ -73,15 +78,14 @@ const displayAll = (data, index) => {
 }
 
 
-// Update UI with current Song
+// Update Index UI with current Song
 const loadSong = (song) => {
     currentSongTitle.innerText = song.name;
     music.src = `${song.path}`;
     currentCoverImage.setAttribute('src', song.cover);
-    console.log(currentCoverImage);
 }
 
-// Check AudioPlaying
+// Check if Audio is Playing
 const isAudioPlaying = () => {
     return playbtn.classList.contains("hide");
 }
@@ -122,7 +126,7 @@ async function retrieveSongsFromServer() {
             songs = data.songs;
             songs.forEach(displayAll);
             loadSong(songs[songIndex]);
-            console.log("Done")
+            nathSongs(songs);
         })
         .catch((error) => {
             console.error("There has been an error", error);
@@ -174,7 +178,6 @@ const shuffleSong = () => {
     return shuffledsongs;
 }
 
-
 // Check if Shuffled is click
 const checkShuffle = () => {
     if(clicked === true) {
@@ -185,11 +188,10 @@ const checkShuffle = () => {
     }
 }
 
-// Reapeat Music Loop
+// Repeat Music Loop
 const enableLoop = () => {
     repeatBtn.classList.toggle('shuffle-background');
     if(repeatBtn.classList.contains('shuffle-background')) {
-        // clicked = true;
         music.loop = true;
         music.load;
     } else {
@@ -197,7 +199,7 @@ const enableLoop = () => {
     }   
 }
 
-// Update Next Music to Play After Current Finishes
+// Update Next Music to Play After Current music Finishes
 const updateMusic = () => {
     let end = music.duration;
     let now = music.currentTime;
@@ -209,9 +211,10 @@ const updateMusic = () => {
         checkShuffle();
         music.play();
     }
+    
 }
 
-// Update Progress Bar Width
+// Update Progress Bar Width as music plays
 const updateProgressBar = () => {
     seekBar.max = music.duration;
     seekBar.value = music.currentTime;
@@ -220,7 +223,7 @@ const updateProgressBar = () => {
     updateMusic();
 }
 
-// ControlMusic Volume
+// Control Music Volume
 const controlVolume = () => {
     music.volume = volumeSlider.value;
     if(volumeSlider.value == 0) {
@@ -239,13 +242,98 @@ const muteVolume = () => {
     controlVolume();
 }
 
+const nathSongs = (songs) => {
+    for (let [key, index] in songs) {
+        if(songs[key].artist == 'Nathaniel Bassey') {
+            let song = songs[key];
+
+            music.src = song.path
+            const nathMusic = document.createElement('div');
+            nathMusic.classList = 'ms';
+
+            const nathDetail = document.createElement('div');
+            nathDetail.classList = 'invisible';
+
+            const nathDetailLeft = document.createElement('div');
+            nathDetailLeft.classList = 'ms-left';
+            nathDetailLeft.innerHTML = `
+                <img src="${song.cover}" alt="">
+                <div class="lv">
+                    <img src="/images/tunes-img/Stroke-1.png" alt="">
+                    <img src="/images/tunes-img/Stroke-3.png" alt="">
+                </div>
+            `
+
+            const nathDetailCenter = document.createElement('div');
+            nathDetailCenter.classList = 'ms-center';
+            nathDetailCenter.innerHTML = `
+                    <h3 class="nath-click">${song.name} ~ ${song.artist}</h3>
+                    <p>Single</p>
+            `
+
+            nathDetail.append(nathDetailLeft);
+            nathDetail.append(nathDetailCenter);
+
+            const nathRight = document.createElement('div');
+            nathRight.classList = 'ms-right';
+            nathRight.innerHTML = `
+                <div class="dots">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <span class='current-time'></span>
+            `
+
+            nathMusic.append(nathDetail);
+            nathMusic.append(nathRight);
+
+            nathTunes.append(nathMusic);
+
+            const crntTime = document.querySelectorAll('.current-time');
+            const nathCurrentMusics = document.querySelectorAll('.nath-click');
+
+            setTimeout(() => {
+                crntTime.forEach((timing) => {
+                    timing.innerHTML = formatTime(music.duration);
+                })
+            }, 300);
+            
+
+            nathDetailCenter.addEventListener('click', () => {
+                console.log(song.path)
+                console.log(songs[key])
+                loadSong(song);
+                playAudio();
+            })
+        }
+    }
+}
+
+let formatTime = (time) => {
+    let min = Math.floor(time / 60);
+    if(min < 10){
+        min = `0` + min;
+    }
+
+    let sec = Math.floor(time % 60);
+    if(sec < 10){
+        sec = `0` + sec;
+    }
+
+    return `${min} : ${sec}`;
+}
+    
+
+
+
 //////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////
 ////// EVENT LISTENERS
 
-// Play, prev, next , shuffle, repeatmusic
+// Play, prev, next , shuffle, repeat
 playHldrs.forEach(play => {
     play.addEventListener('click', () => {
         isAudioPlaying() ? pauseAudio() : playAudio();
@@ -258,7 +346,6 @@ forwardBtn.forEach((forward) => {
 shuffleBtn.addEventListener('click', shuffleSong);
 repeatBtn.addEventListener('click', enableLoop);
 
-
 // Progress Bar Update
 music.addEventListener('timeupdate', updateProgressBar);
 
@@ -270,6 +357,10 @@ seekBar.oninput = function () {
 volumeBtn.addEventListener('click', muteVolume)
 volumeSlider.addEventListener('input', controlVolume)
 
+// loadPlaytunes.addEventListener('click', nathSongs)
+
+
+// Fetch Music on load
 window.addEventListener('load', () => {
     retrieveSongsFromServer();
 })
